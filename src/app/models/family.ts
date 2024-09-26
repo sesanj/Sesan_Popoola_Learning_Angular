@@ -3,6 +3,6 @@ export interface Family {
   age: number;
   title: string;
   occupation: string;
-  id: number;
   phone_number?: string;
+  showPhoneNumber: boolean;
 }
