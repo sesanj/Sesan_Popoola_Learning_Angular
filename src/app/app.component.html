@@ -1,16 +1,16 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesan Popoola Learning Angular</title>
-</head>
-
-<body>
-  <h1>Sesan Popoola Learning Angular</h1>
-  <p>This pages is developed by {{fullName}} a {{age}} years old software developer</p>
-
-</body>
-
-</html>
+<div class="container">
+  <div class="heading">
+    <h1>{{title}}</h1>
+    <h2>Here's a list of every member of {{title}}</h2>
+  </div>
+  <div class="members">
+    <div *ngFor="let member of allMembers" class="member">
+      <h3>{{member.title}}</h3>
+      <p>Full Name: {{member.name}}</p>
+      <p>Age: {{member.age}}</p>
+      <p>Occupation: {{member.occupation}}</p>
+      <p *ngIf="member.showPhoneNumber">Phone: {{member.phone_number}}</p>
+      <p *ngIf="member.phone_number"><button (click)="showPN(member)">Phone Number</button></p>
+    </div>
+  </div>
+</div>
