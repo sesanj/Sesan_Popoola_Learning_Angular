@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CountryListItemComponent } from '../country-list-item/country-list-item.component';
 import { Country } from '../models/country';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-country-list',
   standalone: true,
-  imports: [CountryListItemComponent],
+  imports: [CountryListItemComponent, NgFor],
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss',
 })
