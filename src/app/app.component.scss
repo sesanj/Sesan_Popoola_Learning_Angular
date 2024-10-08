@@ -1,50 +1,10 @@
-h1 {
-  padding: 0px;
-  margin: 0px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
-  color: rgba(0, 83, 128, 0.82);
-}
-.heading {
-  text-align: center;
-}
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-.container {
-  margin: 0;
-  padding: 2%;
-  height: 100vh;
-}
-
-.members {
-  display: flex;
-  justify-content: space-between;
-}
-
-.member {
-  width: 15.5%;
-  background-color: rgba(0, 83, 128, 0.82);
-  font-family: Arial, Helvetica, sans-serif;
-  align-content: center;
-  text-align: center;
+.top {
+  width: 25%;
+  margin-bottom: 20px;
+  background-color: grey;
   color: white;
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
-
-button {
-  background-color: rgb(0, 255, 251);
-  border: 0px;
-  color: black;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.container {
+  display: flex;
+  justify-content: center;
 }

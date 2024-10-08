@@ -1,3 +1,5 @@
-<div *ngFor="let item of country">
-  <app-country-list-item [country]="item"></app-country-list-item>
+<div class="container">
+  <div *ngFor="let item of allCountries" class="countries">
+    <app-country-list-item [country]="item"></app-country-list-item>
+  </div>
 </div>
