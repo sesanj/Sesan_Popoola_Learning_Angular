@@ -16,4 +16,12 @@ export class CountryListComponent {
   allCountries: Country[] = [];
 
   constructor(private CountriesService: CountriesService) {}
+
+  ngOnInit() {
+    this.CountriesService.getCountries().subscribe({
+      next: (data: Country[]) => (this.allCountries = data),
+      error: (err) => console.error('Error fetching Students', err),
+      complete: () => console.log('Student data fetch complete!'),
+    });
+  }
 }
