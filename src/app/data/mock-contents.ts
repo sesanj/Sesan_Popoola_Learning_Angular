@@ -1,6 +1,6 @@
 import { Country } from '../models/country';
 
-export const country: Country[] = [
+export const countries: Country[] = [
   {
     name: 'Canada',
     population: '38,000,000 Milion',

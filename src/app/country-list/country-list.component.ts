@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { CountryListItemComponent } from '../country-list-item/country-list-item.component';
 import { NgFor } from '@angular/common';
-import { country } from '../data/mock-contents';
+import { countries } from '../data/mock-contents';
+import { CountriesService } from '../services/countries.service';
+import { Country } from '../models/country';
 
 @Component({
   selector: 'app-country-list',
@@ -11,5 +13,7 @@ import { country } from '../data/mock-contents';
   styleUrl: './country-list.component.scss',
 })
 export class CountryListComponent {
-  country = country;
+  allCountries: Country[] = [];
+
+  constructor(private CountriesService: CountriesService) {}
 }
