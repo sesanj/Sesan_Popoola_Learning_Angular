@@ -1,6 +1,6 @@
 <div class="container">
   <div class="top">
-    <app-country-list-item [country]="country"></app-country-list-item>
+    <app-country-list-item [country]="country[appCountryIndex]"></app-country-list-item>
   </div>
 </div>
-<app-country-list></app-country-list>
+<app-country-list (indexEmmiter)="onClick($event)"></app-country-list>

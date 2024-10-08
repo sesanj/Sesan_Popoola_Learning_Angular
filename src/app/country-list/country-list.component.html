@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngFor="let item of allCountries" class="countries">
-    <app-country-list-item [country]="item"></app-country-list-item>
+  <div *ngFor="let item of allCountries; let i = index" class="countries">
+    <app-country-list-item (click)="clickCountry(i)" [country]="item"></app-country-list-item>
   </div>
 </div>
