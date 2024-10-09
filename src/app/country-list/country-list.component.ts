@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CountryListItemComponent } from '../country-list-item/country-list-item.component';
 import { NgFor } from '@angular/common';
 import { countries } from '../data/mock-contents';
@@ -15,6 +15,8 @@ import { Country } from '../models/country';
 export class CountryListComponent {
   allCountries: Country[] = [];
 
+  @Output() indexEmmiter = new EventEmitter();
+
   constructor(private CountriesService: CountriesService) {}
 
   ngOnInit() {
@@ -23,5 +25,9 @@ export class CountryListComponent {
       error: (err) => console.error('Error fetching Students', err),
       complete: () => console.log('Student data fetch complete!'),
     });
+  }
+
+  clickCountry(index: number) {
+    this.indexEmmiter.emit(index);
   }
 }

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgForOf } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryListItemComponent } from './country-list-item/country-list-item.component';
 import { CountriesService } from './services/countries.service';
 import { Country } from './models/country';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ import { Country } from './models/country';
     NgIf,
     CountryListComponent,
     CountryListItemComponent,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -23,15 +27,20 @@ import { Country } from './models/country';
 export class AppComponent {
   title: string = 'Country Data';
 
-  country!: Country;
+  country!: Country[];
+  appCountryIndex!: number;
 
   constructor(private CountriesService: CountriesService) {}
 
   ngOnInit() {
     this.CountriesService.getCountries().subscribe({
-      next: (data: any) => (this.country = data[1]),
+      next: (data: Country[]) => (this.country = data),
       error: (err) => console.error('Error fetching Students', err),
       complete: () => console.log('Student data fetch complete!'),
     });
+  }
+
+  onClick(event: number) {
+    this.appCountryIndex = event;
   }
 }
