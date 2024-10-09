@@ -4,4 +4,5 @@ export interface Country {
   population: string;
   gdp: string;
   rating: string;
+  image?: string;
 }

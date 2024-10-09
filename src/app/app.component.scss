@@ -8,3 +8,21 @@
   display: flex;
   justify-content: center;
 }
+
+a {
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  margin-bottom: 30px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}

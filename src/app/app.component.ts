@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgForOf } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { CountryListComponent } from './country-list/country-list.component';
@@ -17,6 +18,8 @@ import { Input } from '@angular/core';
     NgIf,
     CountryListComponent,
     CountryListItemComponent,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,6 +1,15 @@
+<div class="nav-bar">
+  <nav>
+    <div class="navContainer">
+      <a routerLink="/countries" routerLinkActive="active">Country List</a>
+      <a routerLink="/modify-country" routerLinkActive="active">Modify Student</a>
+    </div>
+  </nav>
+</div>
 <div class="container">
   <div class="top">
-    <app-country-list-item [country]="country[appCountryIndex]"></app-country-list-item>
+    <!-- <app-country-list-item *ngIf="country" [country]="country[appCountryIndex]"></app-country-list-item> -->
   </div>
 </div>
-<app-country-list (indexEmmiter)="onClick($event)"></app-country-list>
+<router-outlet></router-outlet>
+<!-- <app-country-list (indexEmmiter)="onClick($event)"></app-country-list> -->
